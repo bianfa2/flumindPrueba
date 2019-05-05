@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    position: absolute;
+    background: #363553;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.subpage {
+    width: 100vw;
+    height: 100vh;
+}
+
+.abstract1 {
+    right: 0;
+    width: 55%;
+    background: url('../img/abstract1.svg');
+    background-position-x: right;
+    opacity: .9;
+}
+
+.abstract2 {
+    left: 0;
+    width: 100%;
+    background: url('../img/abstract2.svg');
+    background-position-x: left;
+    opacity: .9;
+}
+
+.abstract3 {
+    left: 0;
+    width: 100%;
+    background: url('../img/abstract3.svg');
+    background-position-x: left;
+}
+
+.abstract {
+    position: absolute;    
+    top: 0;
+    height: 50%;
+    background-repeat: no-repeat;
+}
+
+.hidden {
+    display: none;
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: url('../fonts/OpenSansCondensed-Light.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans regular";
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans light";
+    src: url('../fonts/OpenSans-Light.ttf');
+}
