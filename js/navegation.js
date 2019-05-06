@@ -1,10 +1,10 @@
 var pages;
+var tabs;
 
 function start() {
     initVariable();       
     pages[1].className = "page animated fadeIn";
-    loadMainPage();
-    
+    loadMainPage();    
 }
 
 function initVariable() {
@@ -15,6 +15,7 @@ function initVariable() {
 
 function loadMainPage() {
     setTimeout(function(){
+
         pages[0].className = "page hidden";
         showMainElements();
 

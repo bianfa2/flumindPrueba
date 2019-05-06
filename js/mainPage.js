@@ -14,9 +14,10 @@ function showMainElements() {
     }, 1000);
 
     setTimeout(function(){
+        document.getElementsByClassName("tabs")[0].className = "tabs animated fadeIn";
         elements[0].className = "main_element main_title animated bounceInDown";
         elements[1].className = "main_element main_desc animated bounceInDown";
-        elements[2].className = "main_element options animated bounceInDown";
+        elements[2].className = "main_element options animated bounceInDown";        
     }, 1500);
 
 }
