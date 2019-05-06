@@ -16,6 +16,7 @@ function showMainElements() {
 
     setTimeout(function(){
         elements[0].className = "main_element main_title animated bounceInDown"
+        elements[1].className = "main_element main_desc animated bounceInDown"
     }, 1500);
 
 }
