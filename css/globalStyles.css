@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    overflow: hidden;
+}
+
 .page {
     position: absolute;
     background: #363553;
@@ -19,7 +23,7 @@
 .abstract1 {
     right: 0;
     width: 55%;
-    background: url('../img/abstract1.svg');
+    background: url('../img/abstracts/abstract1.svg');
     background-position-x: right;
     opacity: .9;
 }
@@ -27,7 +31,7 @@
 .abstract2 {
     left: 0;
     width: 100%;
-    background: url('../img/abstract2.svg');
+    background: url('../img/abstracts/abstract2.svg');
     background-position-x: left;
     opacity: .9;
 }
@@ -35,7 +39,7 @@
 .abstract3 {
     left: 0;
     width: 100%;
-    background: url('../img/abstract3.svg');
+    background: url('../img/abstracts/abstract3.svg');
     background-position-x: left;
 }
 
@@ -44,6 +48,57 @@
     top: 0;
     height: 50%;
     background-repeat: no-repeat;
+}
+
+.tabs {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(to right, #d399dd, #bf8fcf, #ac86c1, #997cb3, #8872a4);
+    text-align: center;
+}
+
+.tab1 {
+    background: url('../img/tabs/inicio.svg');    
+}
+
+.tab2 {
+    background: url('../img/tabs/musica.svg');    
+}
+
+.tab3 {
+    background: url('../img/tabs/cronometro.svg');    
+}
+
+.tab4 {
+    background: url('../img/tabs/contacto.svg');    
+}
+
+.active {
+    top: -30%;
+}
+
+.tab {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 24%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    transition: all .3s ease;
+}
+
+.curved {
+    position: absolute;
+    width: 17%;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: 4.5%; 
+    top: -40%;
+    background: #363553;
+    transition: all .3s ease;    
 }
 
 .hidden {
