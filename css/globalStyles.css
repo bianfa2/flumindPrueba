@@ -3,10 +3,6 @@
     margin: 0;
 }
 
-body {
-    overflow: hidden;
-}
-
 .page {
     position: absolute;
     background: #363553;
@@ -72,6 +68,7 @@ body {
 }
 
 .menu_text {
+    width: 40%;
     font-family: "Roboto thin";
     color: #fff;
     font-size: 20px;
@@ -103,11 +100,6 @@ body {
     font-size: 20px;
 }
 
-.main_desc {
-    margin-top: 65%;
-    padding: 0 15%;
-}
-
 .desc, .button_text {
     font-family: "Open Sans light";
     text-align: center;
@@ -120,15 +112,17 @@ body {
 }
 
 .options {
-    margin-top: 25px;
+    margin-top: 5px;
     width: 100%;
-    height: 150px;
+    height: 195px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     
 }
 
 .option {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,13 +142,20 @@ body {
     background: linear-gradient(to top, #5ca3e6, #92aeee, #bcbaf4, #ddc8f8, #f7d8fc);
 }
 
+.abstract1 {
+    background: url('../img/nubes1.svg');
+}
+
+.abstract2 {
+    background: url('../img/nubes2.svg');
+}
+
 .abstract {
     position: absolute;    
     top: 0;
     height: 50%;
     left: 0;
-    width: 100%;
-    background: url('../img/nubes1.svg');
+    width: 100%;    
     background-repeat: no-repeat;
     background-position-x: left;
 }
@@ -184,8 +185,24 @@ body {
     background: url('../img/tabs/contacto.svg');    
 }
 
-.active {
+.curved_active {
     top: -30%;
+}
+
+.curved_home {
+    transform: translateX(23%);
+}
+
+.curved_music {
+    transform: translateX(175%);
+}
+
+.curved_time {
+    transform: translateX(316%);
+}
+
+.curved_contact {
+    transform: translateX(465%);
 }
 
 .tab {
@@ -196,7 +213,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
-    transition: all .3s ease;
 }
 
 .curved {
@@ -204,7 +220,6 @@ body {
     width: 17%;
     height: 50px;
     border-radius: 100%;
-    margin-left: 4.5%; 
     top: -40%;
     background: #363553;
     transition: all .3s ease;    

@@ -1,12 +1,20 @@
+var abstract = document.getElementById("main_abstract");
+var elements = document.getElementsByClassName("main_element");
+
+function assingMainOptions(){
+
+    document.getElementById("button_activitys").addEventListener("click", function(){
+        showPage(pages[3]);
+    });
+
+}
+
 function showMainElements() {
 
-    var abstracts = document.getElementsByClassName("abstract");
-    var elements = document.getElementsByClassName("main_element");
-
-    abstracts[0].className = "abstract animated fadeIn";
+    abstract.className = "abstract abstract1 animated fadeIn";
+    document.getElementById("tabs").className = "tabs animated fadeIn";
 
     setTimeout(function(){
-        document.getElementById("tabs").className = "tabs animated fadeIn";
         document.getElementById("buttonMenu").className = "menu_icon animated fadeIn";
         elements[0].className = "main_element logo animated fadeIn";
         elements[1].className = "main_element main_title animated bounceInDown";

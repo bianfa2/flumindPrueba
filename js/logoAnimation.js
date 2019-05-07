@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    /* setTimeout(function(){
+    setTimeout(function(){
 
         var logo = document.getElementsByClassName("circle");
         var flumindText = document.getElementById("flumind_text");
@@ -42,8 +42,6 @@ window.onload = function() {
             start();
         }, 3350);
 
-    }, 600); */
-
-    start();
+    }, 600);
 
 };
