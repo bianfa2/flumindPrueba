@@ -37,7 +37,7 @@ function assingEvents(){
     tabs[0].addEventListener("click", function(){
         if(tabActivated != 0){
             curved.className = "curved curved_home animated fadeIn";
-            tabs[0].className = "tab tab1 curved_active animated slideInUp";
+            tabs[0].className = "tab tab1_actived curved_active animated slideInUp";
             for(let i = 3; i <= pages.length - 2; i++){
                 pages[i].className = "page animated slideOutRight";
             }

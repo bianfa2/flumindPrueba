@@ -170,23 +170,33 @@
 }
 
 .tab1 {
-    background: url('../img/tabs/inicio.svg');    
+    background: url('../img/tabs/inicio.svg');
+    background-size: 30%;
+}
+
+.tab1_actived {
+    background: url('../img/tabs/inicio2.svg');
+    background-size: 35%;
+    top: -30%;
 }
 
 .tab2 {
     background: url('../img/tabs/musica.svg');    
+    background-size: 30%;
 }
 
 .tab3 {
     background: url('../img/tabs/cronometro.svg');    
+    background-size: 30%;
 }
 
 .tab4 {
     background: url('../img/tabs/contacto.svg');    
+    background-size: 30%;
 }
 
 .curved_active {
-    top: -30%;
+    
 }
 
 .curved_home {
@@ -212,7 +222,6 @@
     width: 24%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 30%;
 }
 
 .curved {
