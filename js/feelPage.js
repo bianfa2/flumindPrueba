@@ -10,6 +10,8 @@ function assingFeels(){
 
         feels[i].addEventListener("click", function(){
             showPage(pages[4]);
+            feelSelected = i;
+            assingFeelIcon();
         });
 
     }
