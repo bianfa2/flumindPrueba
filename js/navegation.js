@@ -141,7 +141,7 @@ function cleanPages(){
             pages[route[i]].className = "page animated slideOutRight";
         }
         route = [];
-    }else if(tabActivated != 0){
+    }else {
         for(let i = 5; i < 5 + tabActivated; i++){
             pages[i].className = "page animated slideOutDown";
         }
