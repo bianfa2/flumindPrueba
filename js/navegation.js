@@ -39,8 +39,8 @@ function assingEvents(){
             for(let i = 3; i <= pages.length - 2; i++){
                 pages[i].className = "page animated slideOutRight";
             }
-            tabActivated = 0;
             cleanTabs();
+            tabActivated = 0;
             curved.className = "curved curved_home";
             tabs[0].className = "tab tab1_actived animated slideInUp";
         }
@@ -48,8 +48,13 @@ function assingEvents(){
 
     tabs[1].addEventListener("click", function(){
         if(tabActivated != 1){
+            if(tabActivated == -1){
+                for(let i = 3; i <= pages.length - 2; i++){
+                    pages[i].className = "page animated slideOutRight";
+                }
+            }
+            changedTab(pages[3]);
             tabActivated = 1;
-            showPage(pages[3]);
             curved.className = "curved curved_music";
             tabs[1].className = "tab tab2_actived animated slideInUp";
         }
@@ -85,15 +90,21 @@ function showPage(page){
     page.className = "page animated bounceInRight";   
     curved.className = "curved curved_home animated fadeOut"; 
     cleanTabs();
+    tabActivated = -1;
+}
+
+function changedTab(page){
+    page.className = "page animated bounceInRight";   
+    curved.className = "curved curved_home animated fadeOut";
+    cleanTabs();
 }
 
 function cleanTabs(){
-    if(tabActivated != 0){
+
+    if(tabActivated == 0){
         tabs[0].className = "tab tab1 animated slideInDown";
-    }else if(tabActivated != 1){
+    }else if(tabActivated == 1){
         tabs[1].className = "tab tab2 animated slideInDown";
-    }   
-    
-    tabActivated = -1;
+    }
 
 }
