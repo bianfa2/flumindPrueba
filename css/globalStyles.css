@@ -185,6 +185,12 @@
     background-size: 30%;
 }
 
+.tab2_actived {
+    background: url('../img/tabs/musica2.svg');
+    background-size: 35%;
+    top: -30%;
+}
+
 .tab3 {
     background: url('../img/tabs/cronometro.svg');    
     background-size: 30%;
@@ -193,10 +199,6 @@
 .tab4 {
     background: url('../img/tabs/contacto.svg');    
     background-size: 30%;
-}
-
-.curved_active {
-    
 }
 
 .curved_home {

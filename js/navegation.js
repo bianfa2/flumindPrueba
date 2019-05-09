@@ -36,13 +36,24 @@ function assingEvents(){
     //Tabs
     tabs[0].addEventListener("click", function(){
         if(tabActivated != 0){
-            curved.className = "curved curved_home animated fadeIn";
-            tabs[0].className = "tab tab1_actived curved_active animated slideInUp";
             for(let i = 3; i <= pages.length - 2; i++){
                 pages[i].className = "page animated slideOutRight";
             }
+            tabActivated = 0;
+            cleanTabs();
+            curved.className = "curved curved_home";
+            tabs[0].className = "tab tab1_actived animated slideInUp";
         }
-    })
+    });
+
+    tabs[1].addEventListener("click", function(){
+        if(tabActivated != 1){
+            tabActivated = 1;
+            showPage(pages[3]);
+            curved.className = "curved curved_music";
+            tabs[1].className = "tab tab2_actived animated slideInUp";
+        }
+    });
 
     assingMainOptions();
     assingFeels();
@@ -72,8 +83,17 @@ function closeMenu(){
 function showPage(page){
 
     page.className = "page animated bounceInRight";   
-    curved.className = "curved curved_home animated fadeOut";
-    tabs[0].className = "tab tab1 animated slideInDown";
-    tabActivated = -1; 
+    curved.className = "curved curved_home animated fadeOut"; 
+    cleanTabs();
+}
+
+function cleanTabs(){
+    if(tabActivated != 0){
+        tabs[0].className = "tab tab1 animated slideInDown";
+    }else if(tabActivated != 1){
+        tabs[1].className = "tab tab2 animated slideInDown";
+    }   
+    
+    tabActivated = -1;
 
 }

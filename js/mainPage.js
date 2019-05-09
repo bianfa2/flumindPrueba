@@ -4,7 +4,7 @@ var elements = document.getElementsByClassName("main_element");
 function assingMainOptions(){
 
     document.getElementById("button_activitys").addEventListener("click", function(){
-        showPage(pages[3]);
+        showPage(pages[6]);
     });
 
 }
