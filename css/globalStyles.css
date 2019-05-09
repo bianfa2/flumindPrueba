@@ -196,9 +196,21 @@
     background-size: 30%;
 }
 
+.tab3_actived {
+    background: url('../img/tabs/cronometro2.svg');
+    background-size: 35%;
+    top: -30%;
+}
+
 .tab4 {
     background: url('../img/tabs/contacto.svg');    
     background-size: 30%;
+}
+
+.tab4_actived {
+    background: url('../img/tabs/contacto2.svg');
+    background-size: 35%;
+    top: -30%;
 }
 
 .curved_home {

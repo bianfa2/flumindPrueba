@@ -1,4 +1,5 @@
 var pages;
+var route;
 var tabs;
 var tabActivated;
 var feelSelected;
@@ -16,6 +17,7 @@ function start() {
 
 function initVariable() {
 
+    route = [];
     pages = document.getElementsByClassName("page");
     tabs = document.getElementsByClassName("tab");
     curved = document.getElementById("curved");
@@ -36,9 +38,7 @@ function assingEvents(){
     //Tabs
     tabs[0].addEventListener("click", function(){
         if(tabActivated != 0){
-            for(let i = 3; i <= pages.length - 2; i++){
-                pages[i].className = "page animated slideOutRight";
-            }
+            cleanPages();
             cleanTabs();
             tabActivated = 0;
             curved.className = "curved curved_home";
@@ -48,15 +48,31 @@ function assingEvents(){
 
     tabs[1].addEventListener("click", function(){
         if(tabActivated != 1){
-            if(tabActivated == -1){
-                for(let i = 3; i <= pages.length - 2; i++){
-                    pages[i].className = "page animated slideOutRight";
-                }
-            }
-            changedTab(pages[3]);
+            cleanPages();
+            changedTab(5);
             tabActivated = 1;
             curved.className = "curved curved_music";
             tabs[1].className = "tab tab2_actived animated slideInUp";
+        }
+    });
+
+    tabs[2].addEventListener("click", function(){
+        if(tabActivated != 2){
+            cleanPages();
+            changedTab(6);
+            tabActivated = 2;
+            curved.className = "curved curved_time";
+            tabs[2].className = "tab tab3_actived animated slideInUp";
+        }
+    });
+
+    tabs[3].addEventListener("click", function(){
+        if(tabActivated != 3){
+            cleanPages();
+            changedTab(7);
+            tabActivated = 3;
+            curved.className = "curved curved_contact";
+            tabs[3].className = "tab tab4_actived animated slideInUp";
         }
     });
 
@@ -85,16 +101,22 @@ function closeMenu(){
     menu.style.transform = "translateX(100%)";
 }
 
-function showPage(page){
-
-    page.className = "page animated bounceInRight";   
+function showPage(index){
+    route.push(index);
+    pages[index].className = "page animated bounceInRight";   
     curved.className = "curved curved_home animated fadeOut"; 
     cleanTabs();
     tabActivated = -1;
 }
 
-function changedTab(page){
-    page.className = "page animated bounceInRight";   
+function changedTab(index){
+    if(tabActivated == 0){
+        pages[index].className = "page animated slideInUp";
+    }else{
+        setTimeout(function(){
+            pages[index].className = "page animated slideInUp";
+        }, 650);
+    }
     curved.className = "curved curved_home animated fadeOut";
     cleanTabs();
 }
@@ -105,6 +127,23 @@ function cleanTabs(){
         tabs[0].className = "tab tab1 animated slideInDown";
     }else if(tabActivated == 1){
         tabs[1].className = "tab tab2 animated slideInDown";
+    }else if(tabActivated == 2){
+        tabs[2].className = "tab tab3 animated slideInDown";
+    }else if(tabActivated == 3){
+        tabs[3].className = "tab tab4 animated slideInDown";
     }
 
+}
+
+function cleanPages(){
+    if(tabActivated == -1){
+        for(let i = 0; i < route.length; i++){
+            pages[route[i]].className = "page animated slideOutRight";
+        }
+        route = [];
+    }else if(tabActivated != 0){
+        for(let i = 5; i < 5 + tabActivated; i++){
+            pages[i].className = "page animated slideOutDown";
+        }
+    }
 }

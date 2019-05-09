@@ -9,7 +9,7 @@ function assingFeels(){
     for(let i=0; i<feels.length; i++){
 
         feels[i].addEventListener("click", function(){
-            showPage(pages[7]);
+            showPage(4);
             feelSelected = i;
             assingFeelIcon();
         });
